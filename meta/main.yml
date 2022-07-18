@@ -1,10 +1,12 @@
 ---
 galaxy_info:
-  author: First Last
-  description: Skeleton Ansible role
+  author: Alexander King
+  description: Ansible role that downloads and installs the Metasploit Framework.
   company: CISA Cyber Assessments
   galaxy_tags:
-    - skeleton
+    - metasploit
+    - pentest
+    - security
   license: CC0
   # With the release of version 2.10, Ansible finally correctly
   # identifies Kali Linux as being the Kali distribution of the Debian
@@ -34,6 +36,6 @@ galaxy_info:
       versions:
         - bionic
         - focal
-  role_name: skeleton
+  role_name: metasploit
 
 dependencies: []

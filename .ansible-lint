@@ -8,6 +8,8 @@ enable_list:
   - fcqn-builtins
   - no-log-password
   - no-same-owner
+skip_list:
+  - no-handler
 exclude_paths:
   # This exclusion is implicit, unless exclude_paths is defined
   - .cache
