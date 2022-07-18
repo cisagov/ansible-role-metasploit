@@ -1,0 +1,5 @@
+---
+- name: Install metasploit
+  when: metasploit.changed
+  become: true
+  ansible.builtin.command: /tmp/msfinstall
