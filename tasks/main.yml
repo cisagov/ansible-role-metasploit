@@ -1,2 +1,8 @@
 ---
-# tasks file for skeleton
+- name: Download installer
+  become: true
+  ansible.builtin.get_url:
+    url: https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb
+    dest: /tmp/msfinstall
+    mode: 0755
+  register: metasploit
