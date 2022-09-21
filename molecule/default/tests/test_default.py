@@ -18,4 +18,4 @@ def test_msf_installed(host):
     assert directory.exists
     assert directory.is_directory
     # Assert directory is non-empty
-    assert host.run_expect([0], f'[ -n "$(ls -A {dir_full_path})" ]')
+    assert host.run_expect([0], f'[ -n "$(ls --almost-all {dir_full_path})" ]')
