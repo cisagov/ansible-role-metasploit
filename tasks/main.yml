@@ -1,16 +1,24 @@
 ---
-- name: Download Metasploit Framework Installer
-  ansible.builtin.get_url:
-    url: https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb
-    dest: /tmp/msfinstall
-    mode: 0755
+- name: Check if Metasploit Framework is already installed
+  ansible.builtin.stat:
+    path: "{{ install_directory }}"
+  register: msf_directory
 
 - name: Install Metasploit Framework
-  ansible.builtin.command: /tmp/msfinstall
+  block:
+    - name: Download Metasploit Framework Installer
+      ansible.builtin.get_url:
+        url: https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb
+        dest: /tmp/msfinstall
+        mode: 0755
 
-- name: Delete Metasploit Framework Installer
-  ansible.builtin.file:
-    path: /tmp/msfinstall
-    state: absent
-  become: no
-  delegate_to: localhost
+    - name: Install Metasploit Framework
+      ansible.builtin.command:
+        cmd: /tmp/msfinstall
+        creates: "{{ install_directory }}"
+
+    - name: Delete Metasploit Framework Installer
+      ansible.builtin.file:
+        path: /tmp/msfinstall
+        state: absent
+  when: not msf_directory.stat.exists
