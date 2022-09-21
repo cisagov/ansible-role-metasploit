@@ -1,15 +1,11 @@
 ---
 - name: Download Metasploit Framework Installer
-  become: true
   ansible.builtin.get_url:
     url: https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb
     dest: /tmp/msfinstall
     mode: 0755
-  register: metasploit
 
 - name: Install Metasploit Framework
-  when: metasploit.changed
-  become: true
   ansible.builtin.command: /tmp/msfinstall
 
 - name: Delete Metasploit Framework Installer
