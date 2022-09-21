@@ -1,0 +1,3 @@
+---
+# The directory where Metasploit Framework is installed
+install_directory: /opt/metasploit-framework
