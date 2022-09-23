@@ -8,7 +8,7 @@
   block:
     - name: Download the Metasploit Framework installer
       ansible.builtin.get_url:
-        url: https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb
+        url: https://raw.githubusercontent.com/rapid7/metasploit-omnibus/{{ installer_version }}/config/templates/metasploit-framework-wrappers/msfupdate.erb
         dest: /tmp/msfinstall
         mode: 0755
 

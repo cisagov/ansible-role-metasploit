@@ -13,14 +13,9 @@ None.
 
 ## Role Variables ##
 
-None.
-
-<!--
 | Variable | Description | Default | Required |
 |----------|-------------|---------|----------|
-| optional_variable | Describe its purpose. | `default_value` | No |
-| required_variable | Describe its purpose. | n/a | Yes |
--->
+| installer_version | A git commit hash, tag, or branch specifying the version of the Metasploit Framework installer to use. | `6.2.20` | No |
 
 ## Dependencies ##
 
