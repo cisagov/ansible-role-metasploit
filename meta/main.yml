@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Alexander King
-  description: Ansible role that downloads and installs the Metasploit Framework.
+  description: Download and install the Metasploit Framework
   company: CISA Cyber Assessments
   galaxy_tags:
     - metasploit

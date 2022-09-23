@@ -63,6 +63,6 @@ Alexander King - <alexander.king@trio.dhs.gov>
 I would be remiss to not mention [Liam Somerville](https://github.com/leesoh)
 here. This role is largely based on their prior work.
 
-[Metasploit](https://github.com/rapid7/metasploit-framework) is a project of
-[Rapid7](https://www.rapid7.com/) in collaboration with the open source
-community.
+The [Metasploit Framework](https://github.com/rapid7/metasploit-framework) is a
+project of [Rapid7](https://www.rapid7.com/) in collaboration with the open
+source community.

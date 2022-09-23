@@ -12,14 +12,14 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 
 
 def test_installer_deleted(host):
-    """Test that the Metasploit framework installer was removed."""
+    """Test that the Metasploit Framework installer was removed."""
     path = "/tmp/msfinstall"
     f = host.file(path)
     assert not f.exists
 
 
 def test_msf_installed(host):
-    """Test that the Metasploit framework was installed."""
+    """Test that the Metasploit Framework was installed."""
     dir_full_path = "/opt/metasploit-framework/"
     directory = host.file(dir_full_path)
     assert directory.exists
