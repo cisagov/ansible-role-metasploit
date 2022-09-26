@@ -6,6 +6,7 @@ galaxy_info:
   galaxy_tags:
     - metasploit
     - pentest
+    - rapid7
     - security
   license: CC0
   # With the release of version 2.10, Ansible finally correctly
