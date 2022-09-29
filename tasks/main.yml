@@ -8,6 +8,8 @@
   block:
     - name: Download the Metasploit Framework installer
       ansible.builtin.get_url:
+        # TODO: https://github.com/cisagov/ansible-role-metasploit/issues/6
+        # Replace this installer script
         url: https://raw.githubusercontent.com/rapid7/metasploit-omnibus/{{ installer_version }}/config/templates/metasploit-framework-wrappers/msfupdate.erb
         dest: /tmp/msfinstall
         mode: 0755
