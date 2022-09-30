@@ -1,4 +1,4 @@
 ---
 # A commit hash, tag, or branch name indicating what version of the
 # Metasploit Framework installer to use.
-installer_version: 6.2.20
+installer_version: "6.2.20"
