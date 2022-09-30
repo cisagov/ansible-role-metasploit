@@ -4,7 +4,6 @@
 import os
 
 # Third-Party Libraries
-import pytest
 import testinfra.utils.ansible_runner
 
 testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
@@ -12,7 +11,18 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 ).get_hosts("all")
 
 
-@pytest.mark.parametrize("x", [True])
-def test_packages(host, x):
-    """Run a dummy test, just to show what one would look like."""
-    assert x
+def test_installer_deleted(host):
+    """Test that the Metasploit Framework installer was removed."""
+    path = "/tmp/msfinstall"
+    f = host.file(path)
+    assert not f.exists
+
+
+def test_msf_installed(host):
+    """Test that the Metasploit Framework was installed."""
+    dir_full_path = "/opt/metasploit-framework/"
+    directory = host.file(dir_full_path)
+    assert directory.exists
+    assert directory.is_directory
+    # Assert directory is non-empty
+    assert host.run_expect([0], f'[ -n "$(ls --almost-all {dir_full_path})" ]')
