@@ -6,6 +6,14 @@
 
 - name: Install the Metasploit Framework
   block:
+    # The MSF installer adds an APT repo, which requires some GPG
+    # checking
+    - name: Install Metasploit Framework installer prerequisites
+      ansible.builtin.package:
+        name:
+          - gnupg
+      when: ansible_os_family == "Debian"
+
     - name: Download the Metasploit Framework installer
       ansible.builtin.get_url:
         # TODO: https://github.com/cisagov/ansible-role-metasploit/issues/6
