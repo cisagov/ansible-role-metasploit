@@ -1,8 +1,7 @@
 # ansible-role-metasploit #
 
 [![GitHub Build Status](https://github.com/cisagov/ansible-role-metasploit/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-metasploit/actions)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/cisagov/ansible-role-metasploit.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-metasploit/alerts/)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/cisagov/ansible-role-metasploit.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-metasploit/context:python)
+[![CodeQL](https://github.com/cisagov/ansible-role-metasploit/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-metasploit/actions/workflows/codeql-analysis.yml)
 
 This Ansible role downloads and installs the
 [Metasploit penetration testing framework](https://www.metasploit.com).
@@ -29,8 +28,10 @@ Here's how to use it in a playbook:
 - hosts: all
   become: yes
   become_method: sudo
-  roles:
-    - metasploit
+  tasks:
+    - name: Install the Metasploit Framework
+      ansible.builtin.include_role:
+        name: metasploit
 ```
 
 ## Contributing ##
