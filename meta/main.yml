@@ -1,8 +1,9 @@
 ---
+dependencies: []
 galaxy_info:
   author: Alexander King
-  description: Download and install the Metasploit Framework
   company: CISA Cyber Assessments
+  description: Download and install the Metasploit Framework
   galaxy_tags:
     - metasploit
     - pentest
@@ -31,7 +32,6 @@ galaxy_info:
         - bookworm
     - name: Fedora
       versions:
-        - "35"
         - "36"
         - "37"
     - name: Ubuntu
@@ -40,5 +40,3 @@ galaxy_info:
         - focal
         - jammy
   role_name: metasploit
-
-dependencies: []
