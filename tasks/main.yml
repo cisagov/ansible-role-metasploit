@@ -5,6 +5,7 @@
   register: msf_directory
 
 - name: Install the Metasploit Framework
+  when: not msf_directory.stat.exists
   block:
     # The MSF installer adds an APT repo, which requires some GPG
     # checking
@@ -31,4 +32,3 @@
       ansible.builtin.file:
         path: /tmp/msfinstall
         state: absent
-  when: not msf_directory.stat.exists
