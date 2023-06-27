@@ -5,6 +5,7 @@
   register: msf_directory
 
 - name: Install the Metasploit Framework
+  when: not msf_directory.stat.exists
   block:
     # The MSF installer adds an APT repo, which requires some GPG
     # checking
@@ -18,7 +19,7 @@
       ansible.builtin.get_url:
         # TODO: https://github.com/cisagov/ansible-role-metasploit/issues/6
         # Replace this installer script
-        url: https://raw.githubusercontent.com/rapid7/metasploit-omnibus/{{ installer_version }}/config/templates/metasploit-framework-wrappers/msfupdate.erb
+        url: https://raw.githubusercontent.com/rapid7/metasploit-omnibus/{{ metasploit_installer_version }}/config/templates/metasploit-framework-wrappers/msfupdate.erb
         dest: /tmp/msfinstall
         mode: 0755
 
@@ -31,4 +32,3 @@
       ansible.builtin.file:
         path: /tmp/msfinstall
         state: absent
-  when: not msf_directory.stat.exists

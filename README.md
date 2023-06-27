@@ -14,7 +14,7 @@ None.
 
 | Variable | Description | Default | Required |
 |----------|-------------|---------|----------|
-| installer_version | A git commit hash, tag, or branch specifying the version of the Metasploit Framework installer to use. | `6.2.20` | No |
+| metasploit_installer_version | A git commit hash, tag, or branch specifying the version of the Metasploit Framework installer to use. | `6.2.20` | No |
 
 ## Dependencies ##
 
@@ -54,7 +54,7 @@ with this waiver of copyright interest.
 
 ## Author Information ##
 
-Alexander King - <alexander.king@trio.dhs.gov>
+Alexander King - <alexander.king@gwe.cisa.dhs.gov>
 
 I would be remiss to not mention [Liam Somerville](https://github.com/leesoh)
 here. This role is largely based on their prior work.
