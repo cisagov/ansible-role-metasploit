@@ -180,6 +180,16 @@ jobs:
         architecture:
           - amd64
           - arm64
+        exclude:
+          # Metasploit does not support ARM64 on RedHat-based
+          # platforms:
+          # https://downloads.metasploit.com/data/releases/metasploit-framework/rpm
+          - architecture: arm64
+            platform: amazonlinux2023-systemd
+          - architecture: arm64
+            platform: fedora39-systemd
+          - architecture: arm64
+            platform: fedora40-systemd
         platform:
           - amazonlinux2023-systemd
           - debian10-systemd
