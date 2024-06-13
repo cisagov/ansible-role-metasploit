@@ -6,6 +6,9 @@
 This Ansible role downloads and installs the
 [Metasploit penetration testing framework](https://www.metasploit.com).
 
+> [!NOTE]
+> Metasploit [does not support ARM64 on RedHat-based platforms](https://downloads.metasploit.com/data/releases/metasploit-framework/rpm).
+
 ## Requirements ##
 
 None.
@@ -14,7 +17,7 @@ None.
 
 | Variable | Description | Default | Required |
 |----------|-------------|---------|----------|
-| metasploit_installer_version | A git commit hash, tag, or branch specifying the version of the Metasploit Framework installer to use. | `6.2.20` | No |
+| metasploit_installer_version | A git commit hash, tag, or branch specifying the version of the Metasploit Framework installer to use. | `6.4.13` | No |
 
 ## Dependencies ##
 
