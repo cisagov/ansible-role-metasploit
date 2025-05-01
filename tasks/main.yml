@@ -18,7 +18,7 @@
     - name: Download the Metasploit Framework installer
       ansible.builtin.get_url:
         dest: /tmp/msfinstall
-        mode: 0755
+        mode: u=rwx,g=rx,o=rx
         # TODO: https://github.com/cisagov/ansible-role-metasploit/issues/6
         # Replace this installer script
         url: https://raw.githubusercontent.com/rapid7/metasploit-omnibus/{{ metasploit_installer_version }}/config/templates/metasploit-framework-wrappers/msfupdate.erb
