@@ -1,6 +1,7 @@
 # ansible-role-metasploit #
 
 [![GitHub Build Status](https://github.com/cisagov/ansible-role-metasploit/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-metasploit/actions)
+[![License](https://img.shields.io/github/license/cisagov/ansible-role-metasploit)](https://spdx.org/licenses/)
 [![CodeQL](https://github.com/cisagov/ansible-role-metasploit/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-metasploit/actions/workflows/codeql-analysis.yml)
 
 This Ansible role downloads and installs the
