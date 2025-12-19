@@ -222,9 +222,9 @@ jobs:
           - architecture: arm64
             platform: amazonlinux2023-systemd
           - architecture: arm64
-            platform: fedora41-systemd
-          - architecture: arm64
             platform: fedora42-systemd
+          - architecture: arm64
+            platform: fedora43-systemd
         platform:
           - amazonlinux2023-systemd
           - debian10-systemd
