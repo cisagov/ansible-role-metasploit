@@ -35,8 +35,10 @@ galaxy_info:
         - forky
     - name: Fedora
       versions:
-        - "41"
         - "42"
+        # TODO: Add support for Fedora 43 when possible.  See #34 for
+        # more details.
+        # - "43"
     - name: Kali
       versions:
         - "2023"

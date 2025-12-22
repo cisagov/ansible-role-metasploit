@@ -1,6 +1,7 @@
 # ansible-role-metasploit #
 
 [![GitHub Build Status](https://github.com/cisagov/ansible-role-metasploit/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-metasploit/actions)
+[![License](https://img.shields.io/github/license/cisagov/ansible-role-metasploit)](https://spdx.org/licenses/)
 [![CodeQL](https://github.com/cisagov/ansible-role-metasploit/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-metasploit/actions/workflows/codeql-analysis.yml)
 
 This Ansible role downloads and installs the
@@ -17,7 +18,7 @@ None.
 
 | Variable | Description | Default | Required |
 |----------|-------------|---------|----------|
-| metasploit_installer_version | A git commit hash, tag, or branch specifying the version of the Metasploit Framework installer to use. | `6.4.13` | No |
+| metasploit_installer_version | A git commit hash, tag, or branch specifying the version of the Metasploit Framework installer to use. | `6.4.104` | No |
 
 ## Dependencies ##
 

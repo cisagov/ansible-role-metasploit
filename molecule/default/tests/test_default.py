@@ -13,7 +13,10 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 
 def test_installer_deleted(host):
     """Test that the Metasploit Framework installer was removed."""
-    path = "/tmp/msfinstall"
+    # We are only checking that the path does not exist, so it is safe
+    # to ignore the "Probable insecure usage of temp file/directory"
+    # error from Bandit.
+    path = "/tmp/msfinstall"  # nosec: B108
     f = host.file(path)
     assert not f.exists
 
