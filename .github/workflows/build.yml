@@ -233,9 +233,7 @@ jobs:
           - debian13-systemd
           - debian14-systemd
           - fedora42-systemd
-          # TODO: Add support for Fedora 43 when possible.  See #34
-          # for more details.
-          # - fedora43-systemd
+          - fedora43-systemd
           - kali-systemd
           - ubuntu-22-systemd
           - ubuntu-24-systemd
