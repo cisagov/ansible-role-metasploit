@@ -17,7 +17,7 @@ None.
 ## Role Variables ##
 
 | Variable | Description | Default | Required |
-|----------|-------------|---------|----------|
+| -------- | ----------- | ------- | -------- |
 | metasploit_installer_version | A git commit hash, tag, or branch specifying the version of the Metasploit Framework installer to use. | `6.4.104` | No |
 
 ## Dependencies ##
